@@ -1,5 +1,5 @@
 package models
 
 type PhotoWrapper struct {
-	Photos []interface{} `json:"photos"`
+	Photos []*Photo `json:"photos"`
 }
