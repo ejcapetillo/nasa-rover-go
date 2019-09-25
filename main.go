@@ -44,4 +44,14 @@ func main() {
 
 	fmt.Println()
 	fmt.Println(photoList)
+
+	for key, value := range photoList.Photos {
+		fmt.Println(key, *value)
+		source := retrieveSource(*value)
+		fmt.Println(source)
+	}
+}
+
+func retrieveSource(photo models.Photo) string {
+	return photo.ImgSrc
 }
